@@ -108,15 +108,3 @@ class Adafruit_LSM303(Adafruit_I2C):
     def setMagGain(gain=LSM303_MAGGAIN_1_3):
         self.mag.write8( LSM303_REGISTER_MAG_CRB_REG_M, gain)
 
-
-# Simple example prints accel/mag data once per second:
-if __name__ == '__main__':
-
-    from time import sleep
-
-    lsm = Adafruit_LSM303()
-
-    print '[(Accelerometer X, Y, Z), (Magnetometer X, Y, Z, orientation)]'
-    while True:
-        print lsm.read()
-        sleep(1) # Output is fun to watch if this is commented out

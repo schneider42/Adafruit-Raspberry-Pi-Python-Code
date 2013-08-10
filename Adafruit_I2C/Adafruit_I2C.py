@@ -162,9 +162,3 @@ class Adafruit_I2C :
     except IOError, err:
       return self.errMsg()
 
-if __name__ == '__main__':
-  try:
-    bus = Adafruit_I2C(address=0)
-    print "Default I2C bus is accessible"
-  except:
-    print "Error accessing default I2C bus"
